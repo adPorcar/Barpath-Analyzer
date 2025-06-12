@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure--!twnsm6ilchimtbh!cmnd-3htqf67+$$=u!z%)_v=)1z+pd97
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://barpath-analyzer.onrender.com", "127.0.0.1"]
 
 
 # Application definition
