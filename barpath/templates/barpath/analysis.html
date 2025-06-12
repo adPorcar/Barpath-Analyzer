@@ -1,0 +1,55 @@
+{% extends 'barpath/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Análisis de Trayectoria</h3>
+            </div>
+            <div class="card-body">
+                {% if video_url %}
+                <div class="mb-4">
+                    <h4>Video con Detecciones</h4>
+                    <div class="text-center">
+                        <video class="img-fluid rounded" controls>
+                            <source src="{{ video_url }}" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                    <div class="alert alert-info mt-3">
+                        <i class="fas fa-info-circle me-2"></i>
+                        El punto rojo muestra la posición actual de la barra y la línea roja muestra la trayectoria en tiempo real.
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if plot %}
+                <div class="text-center">
+                    <h4>Gráfica de Trayectoria Final</h4>
+                    <img src="data:image/png;base64,{{ plot }}" class="img-fluid" alt="Gráfica de trayectoria">
+                </div>
+                {% endif %}
+                
+                <div class="mt-4">
+                    <h4>Detalles del Análisis</h4>
+                    <p>La gráfica muestra la trayectoria de la barra durante el movimiento. El eje X representa el movimiento horizontal y el eje Y el movimiento vertical.</p>
+                    <div class="alert alert-info">
+                        <h5>Interpretación:</h5>
+                        <ul>
+                            <li>Una línea más vertical indica un movimiento más recto y controlado.</li>
+                            <li>Las desviaciones horizontales indican movimientos laterales de la barra.</li>
+                            <li>La suavidad de la curva indica la fluidez del movimiento.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="{% url 'home' %}" class="btn btn-primary">
+                        <i class="fas fa-upload me-2"></i>Analizar Otro Video
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
