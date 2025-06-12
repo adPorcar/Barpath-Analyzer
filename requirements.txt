@@ -184,13 +184,6 @@ sympy==1.14.0
 tenacity==9.0.0
 tensorboard==2.15.2
 tensorboard-data-server==0.7.2
-tensorflow==2.15.1
-tensorflow-decision-forests==1.8.1
-tensorflow-estimator==2.15.0
-tensorflow-hub==0.16.1
-tensorflow-intel==2.15.1
-tensorflow-io-gcs-filesystem==0.31.0
-tensorflowjs==4.20.0
 tensorstore==0.1.63
 termcolor==2.4.0
 tf_keras==2.15.1
